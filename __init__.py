@@ -7,7 +7,7 @@ from ovos_bus_client.session import SessionManager
 from ovos_date_parser import extract_datetime, nice_date
 import datetime as dt
 import json
-today = dt.today()
+today = dt.date.today()
 
 class MyDummySkill(OVOSSkill):
     def __init__(self, *args, **kwargs):
