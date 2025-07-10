@@ -1,0 +1,1 @@
+Just a dummy skill for testing several things.
