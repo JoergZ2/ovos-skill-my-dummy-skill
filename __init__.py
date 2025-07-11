@@ -47,4 +47,5 @@ class MyDummySkill(OVOSSkill):
         day = extract_datetime(day, lang=self.lang)
         day_speak = nice_date(day[0], lang=self.lang)
         LOG.info("Date is: " + str(day) + ", " + str(day_speak))
+        self.speak(day_speak)
 
