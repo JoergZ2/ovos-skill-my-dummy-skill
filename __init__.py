@@ -9,6 +9,10 @@ import datetime as dt
 import json
 today = dt.date.today()
 
+DEFAULT_SETTINGS = {
+    "__mycroft_skill_firstrun": "False"
+}
+
 class MyDummySkill(OVOSSkill):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -32,7 +36,7 @@ class MyDummySkill(OVOSSkill):
     def initialize(self):
         #from template
         self.settings.merge(DEFAULT_SETTINGS, new_only=True)
-        self.settings_change_callback = self.on_settings_changed
+        #self.settings_change_callback = self.on_settings_changed
     
     @intent_handler('dummy1.intent')
     def handle_dummy_1(self, message):
