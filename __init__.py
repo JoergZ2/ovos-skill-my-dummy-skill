@@ -41,6 +41,7 @@ class MyDummySkill(OVOSSkill):
         """
         day = message.data.get('date')
         day = extract_datetime(day, lang=self.lang)
-        LOG.info("Date is: " + str(day))
+        day_speak = nice_date(day, lang=self.lang)
+        LOG.info("Date is: " + str(day) + ", " + str(day_speak))
         self.speak_dialog("dummy.1.response")
 
