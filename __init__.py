@@ -49,3 +49,12 @@ class MyDummySkill(OVOSSkill):
         LOG.info("Date is: " + str(day) + ", " + str(day_speak))
         self.speak(day_speak)
 
+    æintent_handler('dummy2.intent')
+    def handle_dummy_2(self, message):
+        """
+        Handle the second dummy intent.
+        """
+        a = message.data.get('a')
+        b = message.data.get('b')
+        c = message.data.get('c')
+        self.speak_dialog('dummy2', {'a': a, 'b': b, 'c': c})
