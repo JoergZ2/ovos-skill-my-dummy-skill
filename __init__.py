@@ -7,6 +7,7 @@ from ovos_bus_client.session import SessionManager
 from ovos_date_parser import extract_datetime, nice_date
 import datetime as dt
 import json
+#
 today = dt.date.today()
 
 DEFAULT_SETTINGS = {
@@ -49,7 +50,7 @@ class MyDummySkill(OVOSSkill):
         LOG.info("Date is: " + str(day) + ", " + str(day_speak))
         self.speak(day_speak)
 
-    æintent_handler('dummy2.intent')
+    @intent_handler('dummy2.intent')
     def handle_dummy_2(self, message):
         """
         Handle the second dummy intent.
